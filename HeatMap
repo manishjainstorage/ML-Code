@@ -1,0 +1,16 @@
+import seaborn as sns
+flights = sns.load_dataset("flights")
+flights
+
+
+
+flights = flights.pivot("month", "year", "passengers")
+flights
+
+
+
+ax = sns.heatmap(flights)
+
+
+
+ax = sns.heatmap(flights, annot=True, fmt="d")
